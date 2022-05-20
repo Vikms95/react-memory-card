@@ -1,15 +1,22 @@
 COMPONENTS
 -root
   -App
-    :shuffleCards, updateScore
+    :updateScore
+    :cardsState
+    :handleClick
     -Header
       -Title
       -Score
     -CardsContainer
+      :shuffleCards
       :will render 8 Card components by passing the currentArrayOfCards properties from App to each Card
       -Card
         :will get passed the card info as props to model the component 
         :will get passed the handleClick function from App
+
+COMMUNICATION
+
+  (((Card) CardsContainer) App)
 
 FUNCTIONALITIES
 
