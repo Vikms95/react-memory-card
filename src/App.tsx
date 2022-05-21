@@ -2,37 +2,14 @@ import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import CardsContainer from './components/CardsContainer';
-import data from './data/Data';
+import data from './data/data';
+import { GeneralProps } from './types/types';
 
-function App() {
+const App: React.FC = () => {
   const [phase, setPhase] = useState(0);
-  const [cards, setCards] = useState(
-    {
-      card1: {
-
-      },
-      card2: {
-
-      },
-      card3: {
-
-      },
-      card4: {
-
-      },
-      card5: {
-
-      },
-      card6: {
-
-      },
-      card7: {
-
-      },
-      card8: {
-      },
-    },
-  );
+  // Retrieves which index of cards will be retrieved
+  // from *data* and then pass it as props to CardsContainer
+  const [cards, setCards] = useState(data[phase]);
 
   const handleClick = () => {
     //
@@ -49,7 +26,7 @@ function App() {
   return (
     <main className="App">
       <Header />
-      <CardsContainer />
+      <CardsContainer cards={cards} />
     </main>
   );
 }

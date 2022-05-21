@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { FC } from 'react';
+import { GeneralProps } from '../types/types';
 
-function CardsContainer() {
+interface Props {
+  cards: object;
+}
+
+const CardsContainer: React.FC<Props> = () => {
   const shuffleCards = () => {
-    //
+    console.log();
     //
     //
   };
@@ -11,6 +16,6 @@ function CardsContainer() {
       allo
     </main>
   );
-}
+};
 
 export default CardsContainer;

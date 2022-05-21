@@ -22,6 +22,12 @@ module.exports = {
     'react',
     '@typescript-eslint',
   ],
+  "react/function-component-definition": [
+    2,
+    {
+      namedComponents: "function-declaration",
+    },
+  ],
   rules: {
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     'import/extensions': [
