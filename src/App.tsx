@@ -5,7 +5,7 @@ import CardsContainer from './components/CardsContainer';
 import data from './data/data';
 import { GeneralProps } from './types/types';
 
-const App: FC = () => {
+function App() {
   const [phase, setPhase] = useState(0);
   // Retrieves which index of cards will be retrieved
   // from *data* and then pass it as props to CardsContainer
@@ -29,6 +29,7 @@ const App: FC = () => {
       <CardsContainer
         cards={cards}
         handleClick={handleClick}
+        test={"Hi"}
       />
     </main>
   );

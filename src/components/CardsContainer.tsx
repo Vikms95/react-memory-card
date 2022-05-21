@@ -3,12 +3,13 @@ import { GeneralProps } from '../types/types';
 
 interface Props {
   cards: object;
-  handleClick: Function;
+  handleClick: () => void;
+  test: string;
 }
 
-const CardsContainer: FC<Props> = () => {
+function CardsContainer(props: Props) {
   const shuffleCards = () => {
-    console.log();
+    console.log("hi");
     //
     //
   };
