@@ -27,10 +27,10 @@ export type GeneralProps = {
   /** any function as long as you don't invoke it (not recommended) */
   onSomething: Function;
   /** function that doesn't take or return anything (VERY COMMON) */
-  onClick: (event? :React.MouseEvent<HTMLButtonElement>) => void;
+  handleClick: (event?: React.MouseEvent<HTMLButtonElement>) => void;
   /** function with named prop (VERY COMMON) */
   /** function type syntax that takes an event (VERY COMMON) */
-  onChange: (id?: number, event?: React.ChangeEvent<HTMLInputElement>) => void;
+  handleChange: (id?: number, event?: React.ChangeEvent<HTMLInputElement>) => void;
   /** alternative function type syntax that takes an event (VERY COMMON) */
   optional?: any;
 };

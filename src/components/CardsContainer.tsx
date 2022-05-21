@@ -3,9 +3,10 @@ import { GeneralProps } from '../types/types';
 
 interface Props {
   cards: object;
+  handleClick: Function;
 }
 
-const CardsContainer: React.FC<Props> = () => {
+const CardsContainer: FC<Props> = () => {
   const shuffleCards = () => {
     console.log();
     //
