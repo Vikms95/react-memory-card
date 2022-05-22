@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
-import './App.css';
+import './styles/App.css';
 import Header from './components/Header';
 import CardsContainer from './components/CardsContainer';
 import data from './data/data';
