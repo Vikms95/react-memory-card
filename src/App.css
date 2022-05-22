@@ -1,10 +1,17 @@
-:root {}
+* {
+  border: 1px solid red;
+}
 
+:root {}
 
 body,
 html {
   margin: 0;
   padding: 0;
+}
+
+.root {
+  height: 100%;
 }
 
 .general-container {
@@ -13,17 +20,33 @@ html {
   padding: 3rem;
 }
 
-.title-container {
+.header-container {
   display: flex;
   justify-content: space-between;
   gap: 5rem;
+  margin-bottom: 5rem;
 }
 
-.header-container {
+
+.title-container {
   display: flex;
   flex-direction: row;
 }
 
 .score-container {
   display: flex;
+}
+
+.cards-container {
+  display: grid;
+  margin: 0 2rem;
+  padding: 2rem;
+  gap: 2rem;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 15rem);
+}
+
+.card {
+  height: 15rem;
+  width: 14rem;
 }

@@ -13,7 +13,14 @@ function CardsContainer(props: Props) {
   };
   return (
     <main className="cards-container">
-      allo
+      <div className="card" />
+      <div className="card" />
+      <div className="card" />
+      <div className="card" />
+      <div className="card" />
+      <div className="card" />
+      <div className="card" />
+      <div className="card" />
     </main>
   );
 }
