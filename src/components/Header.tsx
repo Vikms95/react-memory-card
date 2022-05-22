@@ -4,7 +4,7 @@ import Score from './Score';
 
 function Header() {
   return (
-    <header>
+    <header className="header-container">
       <Title />
       <Score />
     </header>

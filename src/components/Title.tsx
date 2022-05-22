@@ -2,8 +2,8 @@ import React from 'react';
 
 function Title() {
   return (
-    <main className="App">
-      allo
+    <main className="title-container">
+      Hello
     </main>
   );
 }

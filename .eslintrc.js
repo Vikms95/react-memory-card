@@ -7,7 +7,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
-    'airbnb-typescript'
+    'airbnb-typescript',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -22,13 +22,10 @@ module.exports = {
     'react',
     '@typescript-eslint',
   ],
-  "react/function-component-definition": [
-    2,
-    {
-      namedComponents: "function-declaration",
-    },
-  ],
+
   rules: {
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"],
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     'import/extensions': [
       'error',

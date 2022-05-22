@@ -1,18 +1,19 @@
-import React, { useState, FC } from 'react';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import CardsContainer from './components/CardsContainer';
 import data from './data/data';
-import { GeneralProps } from './types/types';
 
 function App() {
-  const [phase, setPhase] = useState(0);
+  const [phase, setPhase] = useState<number>(0);
   // Retrieves which index of cards will be retrieved
   // from *data* and then pass it as props to CardsContainer
-  const [cards, setCards] = useState(data[phase]);
+  const [cards, setCards] = useState<object>(data[phase]);
 
-  const handleClick = () => {
-    //
+  const handleClick = (): void => {
+    setCards(cards);
+    setPhase(phase);
     //
     //
   };
@@ -24,12 +25,11 @@ function App() {
   };
 
   return (
-    <main className="App">
+    <main className="general-container">
       <Header />
       <CardsContainer
         cards={cards}
         handleClick={handleClick}
-        test={"Hi"}
       />
     </main>
   );
