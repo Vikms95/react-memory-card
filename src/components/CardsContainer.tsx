@@ -1,24 +1,22 @@
 /* eslint-disable react/no-unused-prop-types */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React from 'react';
+import React, { SyntheticEvent } from 'react';
 import Card from './Card';
 
 interface Props {
   cards: object;
-  handleClick : () => void;
+  handleClick: (arg: SyntheticEvent) => void;
+  shuffleCards: (arg: object) => object[];
 }
 
 function CardsContainer(props: Props) {
-  const { cards, handleClick } = props;
-
-  const shuffleCards = (sortedCards: object): object[] => Object.values(sortedCards).sort(() => (
-    Math.random() - 0.5
-  ));
+  const { cards, handleClick, shuffleCards } = props;
 
   const renderCards = () => {
-    const shuffledCards : object = shuffleCards(cards);
+    const shuffledCards: object = shuffleCards(cards);
     return Object.values(shuffledCards).map((card) => (
       <Card
+        key={card.id}
         cardData={card}
         handleClick={handleClick}
       />

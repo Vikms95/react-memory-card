@@ -1,3 +1,5 @@
+// @ts-ignore
+import uniqid from 'uniqid';
 import jsLogo from '../assets/js-logo.png';
 import javaLogo from '../assets/java-logo.png';
 import tsLogo from '../assets/ts-logo.svg';
@@ -50,34 +52,42 @@ import strategy from '../assets/strategy.png';
 const data = [
   {
     card1: {
+      id: uniqid(),
       name: 'Javascript',
       photo: jsLogo,
     },
     card2: {
+      id: uniqid(),
       name: 'Java',
       photo: javaLogo,
     },
     card3: {
+      id: uniqid(),
       name: 'Typescript',
       photo: tsLogo,
     },
     card4: {
+      id: uniqid(),
       name: 'Python',
       photo: pyLogo,
     },
     card5: {
+      id: uniqid(),
       name: 'C++',
       photo: cppLogo,
     },
     card6: {
+      id: uniqid(),
       name: 'C',
       photo: cLogo,
     },
     card7: {
+      id: uniqid(),
       name: 'C#',
       photo: csLogo,
     },
     card8: {
+      id: uniqid(),
       name: 'PHP',
       photo: phpLogo,
     },
@@ -85,34 +95,42 @@ const data = [
 
   {
     card1: {
+      id: uniqid(),
       name: 'GO',
       photo: goLogo,
     },
     card2: {
+      id: uniqid(),
       name: 'Rust',
       photo: rustLogo,
     },
     card3: {
+      id: uniqid(),
       name: 'Ruby',
       photo: rbLogo,
     },
     card4: {
+      id: uniqid(),
       name: 'Swift',
       photo: swLogo,
     },
     card5: {
+      id: uniqid(),
       name: 'Kotlin',
       photo: ktLogo,
     },
     card6: {
+      id: uniqid(),
       name: 'R',
       photo: rLogo,
     },
     card7: {
+      id: uniqid(),
       name: 'Scala',
       photo: scLogo,
     },
     card8: {
+      id: uniqid(),
       name: 'Haskell',
       photo: hkLogo,
     },
@@ -120,34 +138,42 @@ const data = [
 
   {
     card1: {
+      id: uniqid(),
       name: 'React',
       photo: reactLogo,
     },
     card2: {
+      id: uniqid(),
       name: 'Angular',
       photo: ngLogo,
     },
     card3: {
+      id: uniqid(),
       name: 'Jquery',
       photo: jqLogo,
     },
     card4: {
+      id: uniqid(),
       name: 'Vue',
       photo: vueLogo,
     },
     card5: {
+      id: uniqid(),
       name: 'Svelte',
       photo: svLogo,
     },
     card6: {
+      id: uniqid(),
       name: 'Backbone',
       photo: bbLogo,
     },
     card7: {
+      id: uniqid(),
       name: 'Ember',
       photo: embLogo,
     },
     card8: {
+      id: uniqid(),
       name: 'Preact',
       photo: preactLogo,
     },
@@ -155,34 +181,42 @@ const data = [
 
   {
     card1: {
+      id: uniqid(),
       name: 'Flask',
       photo: flLogo,
     },
     card2: {
+      id: uniqid(),
       name: 'Express',
       photo: exLogo,
     },
     card3: {
+      id: uniqid(),
       name: 'Spring Boot',
       photo: sprLogo,
     },
     card4: {
+      id: uniqid(),
       name: 'Laravel',
       photo: lrvLogo,
     },
     card5: {
+      id: uniqid(),
       name: 'Ruby on Rails',
       photo: rbrLogo,
     },
     card6: {
+      id: uniqid(),
       name: 'ASP.NET',
       photo: aspLogo,
     },
     card7: {
+      id: uniqid(),
       name: 'Fiber',
       photo: fbLogo,
     },
     card8: {
+      id: uniqid(),
       name: 'Django',
       photo: djLogo,
     },
@@ -190,34 +224,42 @@ const data = [
 
   {
     card1: {
+      id: uniqid(),
       name: 'Oracle',
       photo: odbLogo,
     },
     card2: {
+      id: uniqid(),
       name: 'MySQL',
       photo: mysqlLogo,
     },
     card3: {
+      id: uniqid(),
       name: 'MongoDB',
       photo: mgLogo,
     },
     card4: {
+      id: uniqid(),
       name: 'PostgreSQL',
       photo: pgLogo,
     },
     card5: {
+      id: uniqid(),
       name: 'Redis',
       photo: rdLogo,
     },
     card6: {
+      id: uniqid(),
       name: 'MariaDB',
       photo: mdbLogo,
     },
     card7: {
+      id: uniqid(),
       name: 'Cassandra',
       photo: cassLogo,
     },
     card8: {
+      id: uniqid(),
       name: 'MS SQL Server',
       photo: mssqlLogo,
     },
@@ -225,71 +267,85 @@ const data = [
 
   {
     card1: {
+      id: uniqid(),
       name: 'Array',
       photo: '',
     },
     card2: {
+      id: uniqid(),
       name: 'Linked List',
       photo: '',
     },
     card3: {
+      id: uniqid(),
       name: 'Hash Table',
       photo: '',
     },
     card4: {
+      id: uniqid(),
       name: 'Queue',
       photo: '',
     },
     card5: {
+      id: uniqid(),
       name: 'Stack',
       photo: '',
     },
     card6: {
+      id: uniqid(),
       name: 'Binary Tree',
       photo: '',
     },
     card7: {
+      id: uniqid(),
       name: 'Graph',
       photo: '',
     },
     card8: {
+      id: uniqid(),
       name: 'Trie',
       photo: '',
     },
   },
 
-  // Use illustrations from dessign patterns webpage
-  // https://refactoring.guru/design-patterns
   {
     card1: {
+      id: uniqid(),
       name: 'Singleton',
       photo: singleton,
     },
     card2: {
+      id: uniqid(),
       name: 'Factory',
       photo: factory,
     },
     card3: {
+      id: uniqid(),
       name: 'Builder',
       photo: builder,
     },
     card4: {
+      id: uniqid(),
       name: 'Adapter',
       photo: adapter,
     },
     card5: {
+      id: uniqid(),
       name: 'Decorator',
       photo: decorator,
     },
     card6: {
+      id: uniqid(),
       name: 'Facade',
       photo: facade,
     },
     card7: {
+      id: uniqid(),
       name: 'Observer',
       photo: observer,
     },
     card8: {
+      id: uniqid(),
       name: 'Strategy',
       photo: strategy,
     },
