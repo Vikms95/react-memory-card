@@ -1,71 +1,88 @@
+import jsLogo from '../assets/js-logo.png';
+import javaLogo from '../assets/java-logo.png';
+import tsLogo from '../assets/ts-logo.svg';
+import pyLogo from '../assets/py-logo.png';
+import cppLogo from '../assets/cpp-logo.png';
+import cLogo from '../assets/c-logo.svg';
+import csLogo from '../assets/cs-logo.png';
+import phpLogo from '../assets/php-logo.png';
+import goLogo from '../assets/go-logo.jpg';
+import rustLogo from '../assets/rust-logo.svg';
+import rbLogo from '../assets/rb-logo.png';
+import swLogo from '../assets/sw-logo.png';
+import ktLogo from '../assets/kt-logo.png';
+import rLogo from '../assets/r-logo.png';
+import scLogo from '../assets/sc-logo.png';
+import hkLogo from '../assets/hk-logo.png';
+
 const data = [
   {
     card1: {
       name: 'Javascript',
-      photo: '',
+      photo: jsLogo,
     },
     card2: {
       name: 'Java',
-      photo: '',
+      photo: javaLogo,
     },
     card3: {
       name: 'Typescript',
-      photo: '',
+      photo: tsLogo,
     },
     card4: {
       name: 'Python',
-      photo: '',
+      photo: pyLogo,
     },
     card5: {
       name: 'C++',
-      photo: '',
+      photo: cppLogo,
     },
     card6: {
       name: 'C',
-      photo: '',
+      photo: cLogo,
     },
     card7: {
       name: 'C#',
-      photo: '',
+      photo: csLogo,
     },
     card8: {
       name: 'PHP',
-      photo: '',
+      photo: phpLogo,
     },
   },
 
   {
     card1: {
       name: 'GO',
-      photo: '',
+      photo: goLogo,
     },
     card2: {
       name: 'Rust',
-      photo: '',
+      photo: rustLogo,
     },
     card3: {
       name: 'Ruby',
-      photo: '',
+      photo: rbLogo,
     },
     card4: {
       name: 'Swift',
-      photo: '',
+      photo: swLogo,
     },
     card5: {
       name: 'Kotlin',
-      photo: '',
+      photo: ktLogo,
     },
     card6: {
       name: 'R',
-      photo: '',
+      photo: rLogo,
     },
     card7: {
       name: 'Scala',
-      photo: '',
+      photo: scLogo,
     },
     card8: {
       name: 'Haskell',
-      photo: '',
+      photo: hkLogo,
     },
   },
 
@@ -95,7 +112,7 @@ const data = [
       photo: '',
     },
     card7: {
-      name: 'Semantic-UI',
+      name: 'jQuery',
       photo: '',
     },
     card8: {

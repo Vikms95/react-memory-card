@@ -19,7 +19,11 @@ function Card({ cardData, handleClick }: Props) {
       onClick={handleClick}
     >
       {name}
-      {photo}
+      <img
+        src={photo}
+        alt="card"
+        className="card-image"
+      />
     </button>
   );
 }

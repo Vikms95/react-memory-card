@@ -1,5 +1,5 @@
 * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 :root {
@@ -57,9 +57,23 @@ button {
 }
 
 .card {
+  font-weight: 900;
+  font-size: larger;
+  padding-top: 1.5rem;
+  border-radius: 15px;
   background-color: var(--card-color);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 15rem;
   width: 14rem;
+}
+
+.card-image {
+  background-color: white;
+  margin: 1.8rem;
+  margin-bottom: 2rem;
+  width: 10rem;
+  border-radius: 15px;
 }
