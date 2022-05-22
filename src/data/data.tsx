@@ -14,6 +14,14 @@ import ktLogo from '../assets/kt-logo.png';
 import rLogo from '../assets/r-logo.png';
 import scLogo from '../assets/sc-logo.png';
 import hkLogo from '../assets/hk-logo.png';
+import reactLogo from '../assets/react-logo.png';
+import ngLogo from '../assets/ng-logo.png';
+import jqLogo from '../assets/jq-logo.png';
+import vueLogo from '../assets/vue-logo.png';
+import svLogo from '../assets/sv-logo.png';
+import bbLogo from '../assets/bb-logo.png';
+import embLogo from '../assets/emb-logo.png';
+import preactLogo from '../assets/preact-logo.png';
 
 const data = [
   {
@@ -89,35 +97,35 @@ const data = [
   {
     card1: {
       name: 'React',
-      photo: '',
+      photo: reactLogo,
     },
     card2: {
       name: 'Angular',
-      photo: '',
+      photo: ngLogo,
     },
     card3: {
       name: 'Jquery',
-      photo: '',
+      photo: jqLogo,
     },
     card4: {
       name: 'Vue',
-      photo: '',
+      photo: vueLogo,
     },
     card5: {
       name: 'Svelte',
-      photo: '',
+      photo: svLogo,
     },
     card6: {
       name: 'Backbone',
-      photo: '',
+      photo: bbLogo,
     },
     card7: {
-      name: 'jQuery',
-      photo: '',
+      name: 'Ember',
+      photo: embLogo,
     },
     card8: {
       name: 'Preact',
-      photo: '',
+      photo: preactLogo,
     },
   },
 
