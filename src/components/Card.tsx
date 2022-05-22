@@ -3,7 +3,7 @@
 import React from 'react';
 
 interface Props {
-  cardData: {
+  cardData:{
     name: string;
     photo: string;
   }

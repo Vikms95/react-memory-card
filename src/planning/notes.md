@@ -1,3 +1,6 @@
+TODO
+-Implement shuffleCards
+
 COMPONENTS
 -root
   -App
@@ -53,5 +56,4 @@ QUESTIONS
 app has several array of cards with data >
 have a phase variable in state which will determine which array to pick from the object
 this phase variable will be incremented everytime the user passes a phase(when clickedCards array length is equal to currentCardsArray)
-
 

@@ -11,16 +11,18 @@ interface Props {
 function CardsContainer(props: Props) {
   const { cards, handleClick } = props;
 
-  const renderCards = () => (
-    Object.values(cards).map((card) => (
-      <Card
-        handleClick={handleClick}
-        cardData={card}
-      />
-    )));
+  const shuffleCards = (sortedCards: object): object[] => Object.values(sortedCards).sort(() => (
+    Math.random() - 0.5
+  ));
 
-  const shuffleCards = ():void => {
-    console.log(props);
+  const renderCards = () => {
+    const shuffledCards : object = shuffleCards(cards);
+    return Object.values(shuffledCards).map((card) => (
+      <Card
+        cardData={card}
+        handleClick={handleClick}
+      />
+    ));
   };
 
   return (
