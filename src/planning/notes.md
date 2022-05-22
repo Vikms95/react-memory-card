@@ -1,5 +1,6 @@
 TODO
--Implement shuffleCards
+<!-- -Implement shuffleCards -->
+- Implement handleClick
 
 COMPONENTS
 -root

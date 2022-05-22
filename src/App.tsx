@@ -7,34 +7,39 @@ import data from './data/data';
 
 function App() {
   const [phase, setPhase] = useState<number>(6);
-  // Retrieves which index of cards will be retrieved
-  // from *data* and then pass it as props to CardsContainer
   const [cards, setCards] = useState<object>(data[phase]);
   const [clickedCards, setClickedCards] = useState<Array<string>>([]);
 
-  const handleClick = (event : SyntheticEvent): void => {
-    const element = event.target;
-    console.log((event.target as Element).getAttribute('datatype'));
-    //   :if clickedCard id is within the array of clickedCards
+  const isElementClicked = (elementID: string | null): boolean => (
+    (elementID !== null && clickedCards.includes(elementID))
+  );
 
-    //   :reset display
-    //   :reset currentScore
-    //   early return
+  const handleClick = (event: SyntheticEvent): void => {
+    const element: string | null = (event.target as Element).getAttribute('datatype');
+    //  :if clickedCard id is within the array of clickedCards
+    if (isElementClicked(element)) {
+      console.log('Hi');
+      //   :reset display
+      //   :reset currentScore
+      //   early return
+      // else:
+    } else {
+      //   :setClickedCards array to add this new card's id
+      //   it will shuffle automatically since setState rerenders
+      const id: string = element!;
+      setClickedCards((prevClickedCards): string[] => (
+        [...prevClickedCards, id]
+      ));
+      //   :compare the card array length with the clickedCards array length
 
-    // else:
-    //   :setClickedCards array to add this new card's id
-    //   :compare the card array length with the clickedCards array length
+      //     :if length is equal
+      //       :increment the phase variable
+      //       :use next card array on display and shuffle
 
-    //     :if length is equal
-    //       :increment the phase variable
-    //       :use next card array on display and shuffle
-
-    //     :else
-    //       :use same card array and shuffle
-
-  //   :if currentScore is > bestScore
-  //     :update bestScore
-  //   :update currentScore
+      //   :if currentScore is > bestScore
+      //     :update bestScore
+      //   :update currentScore
+    }
   };
 
   /**
