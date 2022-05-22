@@ -12,8 +12,7 @@ function App() {
   const [cards, setCards] = useState<object>(data[phase]);
 
   const handleClick = (): void => {
-    setCards(cards);
-    setPhase(phase);
+    console.log('Hi');
     //
     //
   };

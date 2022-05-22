@@ -2,12 +2,21 @@
   border: 1px solid red;
 }
 
-:root {}
+:root {
+  --bg-color: #ACADBC;
+  --header-color: red;
+  --card-color: #6665DD;
+  --card-container-color: #9B9ECE;
+}
 
 body,
 html {
   margin: 0;
   padding: 0;
+}
+
+button {
+  cursor: pointer;
 }
 
 .root {
@@ -38,6 +47,7 @@ html {
 }
 
 .cards-container {
+  background-color: var(--card-container-color);
   display: grid;
   margin: 0 2rem;
   padding: 2rem;
@@ -47,6 +57,9 @@ html {
 }
 
 .card {
+  background-color: var(--card-color);
+  display: flex;
+  flex-direction: column;
   height: 15rem;
   width: 14rem;
 }
