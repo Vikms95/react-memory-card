@@ -6,7 +6,7 @@ import CardsContainer from './components/CardsContainer';
 import data from './data/data';
 
 function App() {
-  const [phase, setPhase] = useState<number>(2);
+  const [phase, setPhase] = useState<number>(6);
   // Retrieves which index of cards will be retrieved
   // from *data* and then pass it as props to CardsContainer
   const [cards, setCards] = useState<object>(data[phase]);

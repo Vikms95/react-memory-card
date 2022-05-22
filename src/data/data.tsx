@@ -22,6 +22,30 @@ import svLogo from '../assets/sv-logo.png';
 import bbLogo from '../assets/bb-logo.png';
 import embLogo from '../assets/emb-logo.png';
 import preactLogo from '../assets/preact-logo.png';
+import flLogo from '../assets/fl-logo.png';
+import exLogo from '../assets/ex-logo.png';
+import sprLogo from '../assets/spr-logo.png';
+import lrvLogo from '../assets/lrv-logo.png';
+import rbrLogo from '../assets/rbr-logo.png';
+import aspLogo from '../assets/asp-logo.png';
+import fbLogo from '../assets/fb-logo.png';
+import djLogo from '../assets/dj-logo.png';
+import odbLogo from '../assets/odb-logo.png';
+import mysqlLogo from '../assets/mysql-logo.png';
+import mgLogo from '../assets/mg-logo.png';
+import pgLogo from '../assets/pg-logo.png';
+import rdLogo from '../assets/rd-logo.png';
+import mdbLogo from '../assets/mdb-logo.png';
+import cassLogo from '../assets/cass-logo.png';
+import mssqlLogo from '../assets/mssql-logo.png';
+import singleton from '../assets/singleton.png';
+import factory from '../assets/factory.png';
+import builder from '../assets/builder.png';
+import adapter from '../assets/adapter.png';
+import decorator from '../assets/decorator.png';
+import facade from '../assets/facade.png';
+import observer from '../assets/observer.png';
+import strategy from '../assets/strategy.png';
 
 const data = [
   {
@@ -132,70 +156,70 @@ const data = [
   {
     card1: {
       name: 'Flask',
-      photo: '',
+      photo: flLogo,
     },
     card2: {
       name: 'Express',
-      photo: '',
+      photo: exLogo,
     },
     card3: {
       name: 'Spring Boot',
-      photo: '',
+      photo: sprLogo,
     },
     card4: {
       name: 'Laravel',
-      photo: '',
+      photo: lrvLogo,
     },
     card5: {
       name: 'Ruby on Rails',
-      photo: '',
+      photo: rbrLogo,
     },
     card6: {
       name: 'ASP.NET',
-      photo: '',
+      photo: aspLogo,
     },
     card7: {
       name: 'Fiber',
-      photo: '',
+      photo: fbLogo,
     },
     card8: {
       name: 'Django',
-      photo: '',
+      photo: djLogo,
     },
   },
 
   {
     card1: {
       name: 'Oracle',
-      photo: '',
+      photo: odbLogo,
     },
     card2: {
       name: 'MySQL',
-      photo: '',
+      photo: mysqlLogo,
     },
     card3: {
       name: 'MongoDB',
-      photo: '',
+      photo: mgLogo,
     },
     card4: {
       name: 'PostgreSQL',
-      photo: '',
+      photo: pgLogo,
     },
     card5: {
       name: 'Redis',
-      photo: '',
+      photo: rdLogo,
     },
     card6: {
       name: 'MariaDB',
-      photo: '',
+      photo: mdbLogo,
     },
     card7: {
       name: 'Cassandra',
-      photo: '',
+      photo: cassLogo,
     },
     card8: {
       name: 'MS SQL Server',
-      photo: '',
+      photo: mssqlLogo,
     },
   },
 
@@ -239,35 +263,35 @@ const data = [
   {
     card1: {
       name: 'Singleton',
-      photo: '',
+      photo: singleton,
     },
     card2: {
       name: 'Factory',
-      photo: '',
+      photo: factory,
     },
     card3: {
       name: 'Builder',
-      photo: '',
+      photo: builder,
     },
     card4: {
       name: 'Adapter',
-      photo: '',
+      photo: adapter,
     },
     card5: {
       name: 'Decorator',
-      photo: '',
+      photo: decorator,
     },
     card6: {
       name: 'Facade',
-      photo: '',
+      photo: facade,
     },
     card7: {
       name: 'Observer',
-      photo: '',
+      photo: observer,
     },
     card8: {
       name: 'Strategy',
-      photo: '',
+      photo: strategy,
     },
   },
 ];
