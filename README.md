@@ -4,6 +4,13 @@
 
 ![alt text](src/assets/memolearn-preview.png?raw=true "screenshot of memory card gameplay")
 
+## Description
+
+This is a memory card game that consists of 7 phases.
+The user can click the cards that are displayed. Each time a card is clicked, the player will get one point added to their score. 
+If the user clicks a card that was already clicked, the score will be reset to 0 and will be brought back to the beggining of the game (just like in old-school videogames :D).
+The best score of the user in the current session will be stored between games so it can challenge itself with getting the highest score possible, or who knows, maybe beating the game ;)
+
 ## Project Objectives
 
 1. Build a memory game of programming tools, languages and concepts
@@ -18,17 +25,13 @@
 4. Organize state to make sure all the rerenders are provided with the synced information of state
 
 ## Technologies used
+
 1. React
 2. Typescript
 3. Jest
 
-## Description
-This is a memory card game that consists of 7 phases.
-The user can click the cards that are displayed. Each time a card is clicked, the player will get one point added to their score. 
-If the user clicks a card that was already clicked, the score will be reset to 0 and will be brought back to the beggining of the game (just like in old-school videogames :D).
-The best score of the user in the current session will be stored between games so it can challenge itself with getting the highest score possible, or who knows, maybe beating the game ;)
-
 ## Challenges I faced 
+
 ### 1.
 ### 2.
 ### 3.
