@@ -9,7 +9,7 @@ function App() {
   const [score, setScore] = useState<number>(0);
   const [bestScore, setBestScore] = useState<number>(0);
   const [phase, setPhase] = useState<number>(0);
-  const [cards, setCards] = useState<object>(data[phase]);
+  const [cards, setCards] = useState<Array<object>>(data);
   const [clickedCardsIDs, setClickedCards] = useState<Array<string>>([]);
 
   const isElementClicked = (elementID: string | null): boolean => (
@@ -46,22 +46,23 @@ function App() {
 
     if (isElementClicked(element)) {
       resetScore();
+      setPhase(0);
       resetClickedCards();
-      //   :reset display
-      //   early return
       return;
     }
-    const id: string = element!;
 
     updateScore();
+
+    const id: string = element!;
 
     setClickedCards((prevClickedCards): string[] => (
       [...prevClickedCards, id]
     ));
 
     if (isAllCardsClicked()) {
-      setPhase((prevPhase): number => prevPhase + 1);
-      console.log(phase);
+      setPhase((prevPhase):number => prevPhase + 1);
+      setCards((prevCards) => prevCards);
+      resetClickedCards();
     }
   };
 
@@ -82,6 +83,7 @@ function App() {
       />
       <CardsContainer
         cards={cards}
+        phase={phase}
         handleClick={handleClick}
         shuffleCards={shuffleCards}
       />

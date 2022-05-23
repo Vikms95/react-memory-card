@@ -31,9 +31,9 @@ button {
 
 .header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 

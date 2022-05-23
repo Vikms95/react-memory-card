@@ -1,7 +1,8 @@
 TODO
 <!-- -Implement shuffleCards -->
 - Implement handleClick
-
+  - Make phase update when both arrays are same length
+    :cards is not getting updated
 COMPONENTS
 -root
   -App
