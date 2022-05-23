@@ -2,7 +2,7 @@
 
 # 👉[LIVE PREVIEW](https://vikms95.github.io/react-memory-card) 👈
 
-![alt text](assets/memolearn-preview-png?raw=true "screenshot of memory card gameplay")
+![alt text](src/assets/memolearn-preview.png?raw=true "screenshot of memory card gameplay")
 
 ## Project Objectives
 
