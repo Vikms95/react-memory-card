@@ -1,6 +1,6 @@
 TODO
 <!-- -Implement shuffleCards -->
-- Implement handleClick
+<!-- - Implement handleClick -->
   <!-- - Make phase update when both arrays are same length
     :cards is not getting updated -->
   -Functionality if final is reached

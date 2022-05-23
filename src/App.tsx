@@ -4,6 +4,7 @@ import './styles/App.css';
 import Header from './components/Header';
 import CardsContainer from './components/CardsContainer';
 import data from './data/data';
+import VictoryView from './components/VictoryView';
 
 function App() {
   const [score, setScore] = useState<number>(0);
@@ -11,6 +12,7 @@ function App() {
   const [phase, setPhase] = useState<number>(0);
   const [cards, setCards] = useState<Array<object>>(data);
   const [clickedCardsIDs, setClickedCards] = useState<Array<string>>([]);
+  const [gameWin, setGameWin] = useState <boolean>(false);
 
   const isBestEqualsToCurrent = (): boolean => score >= bestScore;
 
@@ -20,6 +22,10 @@ function App() {
 
   const isAllCardsClicked = ():boolean => (
     clickedCardsIDs.length >= Object.values(cards).length
+  );
+
+  const isGameWon = ():boolean => (
+    phase === 6 && isAllCardsClicked()
   );
 
   const updateScore = ():void => {
@@ -45,7 +51,10 @@ function App() {
     ));
 
     if (isAllCardsClicked()) {
-      setPhase((prevPhase):number => prevPhase + 1);
+      if (isGameWon()) {
+        setGameWin(true);
+      }
+      setPhase((prevPhase): number => prevPhase + 1);
       setCards((prevCards) => prevCards);
       resetClickedCards();
     }
@@ -78,6 +87,10 @@ function App() {
     ))
   );
 
+  const restartGame = ():void => {
+    setGameWin(false);
+  };
+
   const getPhaseCards = ():object => cards[phase];
 
   return (
@@ -87,11 +100,19 @@ function App() {
         phase={phase}
         bestScore={bestScore}
       />
-      <CardsContainer
-        cards={getPhaseCards()}
-        handleClick={handleClick}
-        shuffleCards={shuffleCards}
-      />
+      {gameWin
+        ? (
+          <VictoryView
+            restartGame={restartGame}
+          />
+        )
+        : (
+          <CardsContainer
+            cards={getPhaseCards()}
+            handleClick={handleClick}
+            shuffleCards={shuffleCards}
+          />
+        )}
     </main>
   );
 }

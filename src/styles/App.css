@@ -91,3 +91,24 @@ button {
   width: 10rem;
   border-radius: 15px;
 }
+
+.victory-title{
+  display: flex;
+  align-self: center;
+  justify-self:center;
+}
+
+.reset-game{
+  background-color: #706ed5;
+  font-size: 2rem;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  align-self: center;
+  padding: 2rem 1rem;
+  border-radius: 15px 0px;
+  width: 30%;
+}
+.reset-game:hover{
+  background-color: #7f7dda;
+}
