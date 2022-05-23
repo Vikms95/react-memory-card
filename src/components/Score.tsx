@@ -1,9 +1,26 @@
 import React from 'react';
 
-function Score() {
+interface Props {
+  score: number;
+  bestScore: number;
+}
+
+function Score(props: Props) {
+  const { score, bestScore } = props;
+
   return (
     <main className="score-container">
-      Score is 3424
+      <div className="score">
+        Score:
+        {' '}
+        {score}
+      </div>
+      <div className="score">
+        Best score:
+        {' '}
+        {bestScore}
+      </div>
+
     </main>
   );
 }

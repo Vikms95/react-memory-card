@@ -6,39 +6,62 @@ import CardsContainer from './components/CardsContainer';
 import data from './data/data';
 
 function App() {
-  const [phase, setPhase] = useState<number>(6);
+  const [score, setScore] = useState<number>(0);
+  const [bestScore, setBestScore] = useState<number>(0);
+  const [phase, setPhase] = useState<number>(0);
   const [cards, setCards] = useState<object>(data[phase]);
-  const [clickedCards, setClickedCards] = useState<Array<string>>([]);
+  const [clickedCardsIDs, setClickedCards] = useState<Array<string>>([]);
 
   const isElementClicked = (elementID: string | null): boolean => (
-    (elementID !== null && clickedCards.includes(elementID))
+    elementID !== null && clickedCardsIDs.includes(elementID)
   );
+
+  const isBestEqualsToCurrent = (): boolean => score >= bestScore;
+
+  const isAllCardsClicked = ():boolean => (
+    clickedCardsIDs.length >= Object.values(cards).length
+  );
+
+  const updateScore = () => {
+    setScore((prevScore): number => prevScore + 1);
+    if (isBestEqualsToCurrent()) {
+      setBestScore((prevBestScore): number => prevBestScore + 1);
+    }
+  };
+
+  const resetScore = (): void => {
+    setScore(0);
+  };
+
+  const resetClickedCards = ():void => {
+    setClickedCards((prevClickedCards): string[] => {
+      const newArray = prevClickedCards;
+      newArray.length = 0;
+      return newArray;
+    });
+  };
 
   const handleClick = (event: SyntheticEvent): void => {
     const element: string | null = (event.target as Element).getAttribute('datatype');
-    //  :if clickedCard id is within the array of clickedCards
+
     if (isElementClicked(element)) {
-      console.log('Hi');
+      resetScore();
+      resetClickedCards();
       //   :reset display
-      //   :reset currentScore
       //   early return
-      // else:
-    } else {
-      //   :setClickedCards array to add this new card's id
-      //   it will shuffle automatically since setState rerenders
-      const id: string = element!;
-      setClickedCards((prevClickedCards): string[] => (
-        [...prevClickedCards, id]
-      ));
-      //   :compare the card array length with the clickedCards array length
+      return;
+    }
+    const id: string = element!;
 
-      //     :if length is equal
-      //       :increment the phase variable
-      //       :use next card array on display and shuffle
+    updateScore();
 
-      //   :if currentScore is > bestScore
-      //     :update bestScore
-      //   :update currentScore
+    setClickedCards((prevClickedCards): string[] => (
+      [...prevClickedCards, id]
+    ));
+
+    if (isAllCardsClicked()) {
+      setPhase((prevPhase): number => prevPhase + 1);
+      console.log(phase);
     }
   };
 
@@ -51,15 +74,12 @@ function App() {
     ))
   );
 
-  const updateScore = () => {
-    //
-    //
-    //
-  };
-
   return (
     <main className="general-container">
-      <Header />
+      <Header
+        score={score}
+        bestScore={bestScore}
+      />
       <CardsContainer
         cards={cards}
         handleClick={handleClick}

@@ -1,6 +1,6 @@
 {
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
+   "source.fixAll.eslint": true,
   },
   "eslint.validate": [
     [
@@ -8,5 +8,6 @@
       "typescript",
       "typescript"
     ]
-  ]
+  ],
+  "files.eol": "\r\n"
 }

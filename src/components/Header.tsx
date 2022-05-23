@@ -2,11 +2,20 @@ import React from 'react';
 import Title from './Title';
 import Score from './Score';
 
-function Header() {
+interface Props {
+  score: number;
+  bestScore: number;
+}
+
+function Header(props: Props) {
+  const { score, bestScore } = props;
   return (
     <header className="header-container">
       <Title />
-      <Score />
+      <Score
+        score={score}
+        bestScore={bestScore}
+      />
     </header>
   );
 }
