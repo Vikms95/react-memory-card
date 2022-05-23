@@ -32,8 +32,11 @@ The best score of the user in the current session will be stored between games s
 
 ## Challenges I faced 
 
-### 1.
-### 2.
-### 3.
+### 1. Creating interfaces for my components props so they would get the types they expected. Looked up on the internet some tutorials.
+### 2. Setting up and using React with Typescript. It first felt super clunky but I ended up finding a good configuration.
+### 3. Manage the phase update everytime the user would reach the end of every phase. I had to rearrange my state to accomplish this. 
 
-# Room for improvement
+## Room for improvement
+#### Styling could be improved
+#### Add localStorage functionality or database to store the highest score among users
+#### Usage of some Hooks to avoid repeating code and make it look cleaner
