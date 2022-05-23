@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unused-prop-types */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { SyntheticEvent } from 'react';
 import Card from './Card';
 

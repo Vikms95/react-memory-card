@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { SyntheticEvent, useState } from 'react';
 import './styles/App.css';
 import Header from './components/Header';
