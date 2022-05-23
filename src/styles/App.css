@@ -83,6 +83,10 @@ button {
   padding: 9rem;
 }
 
+.card:hover{
+  box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
 .card-image {
   /* background-color: white; */
   margin: 1.8rem;
