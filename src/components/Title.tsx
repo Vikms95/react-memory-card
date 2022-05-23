@@ -2,9 +2,9 @@ import React from 'react';
 
 function Title() {
   return (
-    <main className="title-container">
-      Hello
-    </main>
+    <h1 className="title-container">
+      memolearn
+    </h1>
   );
 }
 

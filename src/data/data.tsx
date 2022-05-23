@@ -202,7 +202,7 @@ const data = [
     },
     card5: {
       id: uniqid(),
-      name: 'Ruby on Rails',
+      name: 'Rails',
       photo: rbrLogo,
     },
     card6: {
@@ -260,7 +260,7 @@ const data = [
     },
     card8: {
       id: uniqid(),
-      name: 'MS SQL Server',
+      name: 'MS SQL',
       photo: mssqlLogo,
     },
   },

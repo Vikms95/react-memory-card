@@ -66,24 +66,23 @@ function App() {
     }
   };
 
-  /**
-   *Takes cards object and returns an array of cards with the cards shuffled
-   */
   const shuffleCards = (sortedCards: object): object[] => (
     Object.values(sortedCards).sort(() => (
       Math.random() - 0.5
     ))
   );
 
+  const getPhaseCards = ():object => cards[phase];
+
   return (
     <main className="general-container">
       <Header
         score={score}
+        phase={phase}
         bestScore={bestScore}
       />
       <CardsContainer
-        cards={cards}
-        phase={phase}
+        cards={getPhaseCards()}
         handleClick={handleClick}
         shuffleCards={shuffleCards}
       />
