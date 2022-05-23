@@ -12,25 +12,21 @@ function App() {
   const [cards, setCards] = useState<Array<object>>(data);
   const [clickedCardsIDs, setClickedCards] = useState<Array<string>>([]);
 
+  const isBestEqualsToCurrent = (): boolean => score >= bestScore;
+
   const isElementClicked = (elementID: string | null): boolean => (
     elementID !== null && clickedCardsIDs.includes(elementID)
   );
-
-  const isBestEqualsToCurrent = (): boolean => score >= bestScore;
 
   const isAllCardsClicked = ():boolean => (
     clickedCardsIDs.length >= Object.values(cards).length
   );
 
-  const updateScore = () => {
+  const updateScore = ():void => {
     setScore((prevScore): number => prevScore + 1);
     if (isBestEqualsToCurrent()) {
       setBestScore((prevBestScore): number => prevBestScore + 1);
     }
-  };
-
-  const resetScore = (): void => {
-    setScore(0);
   };
 
   const resetClickedCards = ():void => {
@@ -41,18 +37,7 @@ function App() {
     });
   };
 
-  const handleClick = (event: SyntheticEvent): void => {
-    const element: string | null = (event.target as Element).getAttribute('datatype');
-
-    if (isElementClicked(element)) {
-      resetScore();
-      setPhase(0);
-      resetClickedCards();
-      return;
-    }
-
-    updateScore();
-
+  const updateClickedCards = (element: string | null):void => {
     const id: string = element!;
 
     setClickedCards((prevClickedCards): string[] => (
@@ -64,6 +49,27 @@ function App() {
       setCards((prevCards) => prevCards);
       resetClickedCards();
     }
+  };
+
+  const resetScore = (): void => {
+    setScore(0);
+  };
+
+  const resetGame = (): void => {
+    resetScore();
+    resetClickedCards();
+    setPhase(0);
+  };
+
+  const handleClick = (event: SyntheticEvent): void => {
+    const element: string | null = (event.target as Element).getAttribute('datatype');
+    if (isElementClicked(element)) {
+      resetGame();
+      return;
+    }
+
+    updateScore();
+    updateClickedCards(element);
   };
 
   const shuffleCards = (sortedCards: object): object[] => (

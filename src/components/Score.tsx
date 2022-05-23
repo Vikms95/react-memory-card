@@ -9,7 +9,7 @@ function Score(props: Props) {
   const { score, bestScore } = props;
 
   return (
-    <main className="score-container">
+    <div className="score-container">
       <div className="score">
         Score:
         {' '}
@@ -21,7 +21,7 @@ function Score(props: Props) {
         {bestScore}
       </div>
 
-    </main>
+    </div>
   );
 }
 
