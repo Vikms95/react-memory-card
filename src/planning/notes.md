@@ -3,7 +3,7 @@ TODO
 <!-- - Implement handleClick -->
   <!-- - Make phase update when both arrays are same length
     :cards is not getting updated -->
-  -Functionality if final is reached
+  <!-- -Functionality if final is reached -->
   -Add ds icons
 COMPONENTS
 -root

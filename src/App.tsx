@@ -1,8 +1,8 @@
 import React, { SyntheticEvent, useState } from 'react';
 import './styles/App.css';
+import data from './data/data';
 import Header from './components/Header';
 import CardsContainer from './components/CardsContainer';
-import data from './data/data';
 import VictoryView from './components/VictoryView';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
   const [phase, setPhase] = useState<number>(0);
   const [cards, setCards] = useState<Array<object>>(data);
   const [clickedCardsIDs, setClickedCards] = useState<Array<string>>([]);
-  const [gameWin, setGameWin] = useState <boolean>(false);
+  const [gameWin, setGameWin] = useState<boolean>(false);
 
   const isBestEqualsToCurrent = (): boolean => score >= bestScore;
 
@@ -19,22 +19,22 @@ function App() {
     elementID !== null && clickedCardsIDs.includes(elementID)
   );
 
-  const isAllCardsClicked = ():boolean => (
+  const isAllCardsClicked = (): boolean => (
     clickedCardsIDs.length >= Object.values(cards).length
   );
 
-  const isGameWon = ():boolean => (
+  const isGameWon = (): boolean => (
     phase === 6 && isAllCardsClicked()
   );
 
-  const updateScore = ():void => {
+  const updateScore = (): void => {
     setScore((prevScore): number => prevScore + 1);
     if (isBestEqualsToCurrent()) {
       setBestScore((prevBestScore): number => prevBestScore + 1);
     }
   };
 
-  const resetClickedCards = ():void => {
+  const resetClickedCards = (): void => {
     setClickedCards((prevClickedCards): string[] => {
       const newArray = prevClickedCards;
       newArray.length = 0;
@@ -42,7 +42,7 @@ function App() {
     });
   };
 
-  const updateClickedCards = (element: string | null):void => {
+  const updateClickedCards = (element: string | null): void => {
     const id: string = element!;
 
     setClickedCards((prevClickedCards): string[] => (
@@ -86,11 +86,11 @@ function App() {
     ))
   );
 
-  const restartGame = ():void => {
+  const restartGame = (): void => {
     setGameWin(false);
   };
 
-  const getPhaseCards = ():object => cards[phase];
+  const getPhaseCards = (): object => cards[phase];
 
   return (
     <main className="general-container">

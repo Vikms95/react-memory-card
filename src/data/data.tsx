@@ -1,4 +1,3 @@
-// @ts-ignore
 import uniqid from 'uniqid';
 import jsLogo from '../assets/js-logo.png';
 import javaLogo from '../assets/java-logo.png';
@@ -40,6 +39,14 @@ import rdLogo from '../assets/rd-logo.png';
 import mdbLogo from '../assets/mdb-logo.png';
 import cassLogo from '../assets/cass-logo.png';
 import mssqlLogo from '../assets/mssql-logo.png';
+import set from '../assets/set.png';
+import linkedList from '../assets/linked-list.png';
+import hashTable from '../assets/hash-table.png';
+import queue from '../assets/queue.png';
+import stack from '../assets/stack.png';
+import binaryTree from '../assets/binary-tree.png';
+import graph from '../assets/graph.png';
+import trie from '../assets/trie.png';
 import singleton from '../assets/singleton.png';
 import factory from '../assets/factory.png';
 import builder from '../assets/builder.png';
@@ -268,43 +275,43 @@ const data = [
   {
     card1: {
       id: uniqid(),
-      name: 'Array',
-      photo: '',
+      name: 'Set',
+      photo: set,
     },
     card2: {
       id: uniqid(),
       name: 'Linked List',
-      photo: '',
+      photo: linkedList,
     },
     card3: {
       id: uniqid(),
       name: 'Hash Table',
-      photo: '',
+      photo: hashTable,
     },
     card4: {
       id: uniqid(),
       name: 'Queue',
-      photo: '',
+      photo: queue,
     },
     card5: {
       id: uniqid(),
       name: 'Stack',
-      photo: '',
+      photo: stack,
     },
     card6: {
       id: uniqid(),
       name: 'Binary Tree',
-      photo: '',
+      photo: binaryTree,
     },
     card7: {
       id: uniqid(),
       name: 'Graph',
-      photo: '',
+      photo: graph,
     },
     card8: {
       id: uniqid(),
       name: 'Trie',
-      photo: '',
+      photo: trie,
     },
   },
 

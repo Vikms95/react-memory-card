@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface Props {
-  restartGame : () => void;
+  restartGame: () => void;
 }
 
 function VictoryView(props: Props) {

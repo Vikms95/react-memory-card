@@ -3,7 +3,7 @@
 import React, { SyntheticEvent } from 'react';
 
 interface Props {
-  cardData:{
+  cardData: {
     id: string;
     name: string;
     photo: string;
