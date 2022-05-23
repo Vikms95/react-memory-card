@@ -1,6 +1,6 @@
 # MEMORY CARD GAME
 
-# 👉[LIVE PREVIEW](https://vikms95.github.io/react-memory-card) 👈
+# 👉 [LIVE PREVIEW](https://vikms95.github.io/react-memory-card) 👈
 
 ![alt text](src/assets/memolearn-preview.png?raw=true "screenshot of memory card gameplay")
 
