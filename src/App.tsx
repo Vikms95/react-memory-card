@@ -18,10 +18,15 @@ function App() {
     if (isGameWon()) {
       setGameWin(true);
     }
+
     if (isAllCardsClicked()) {
       setPhase((prevPhase): number => prevPhase + 1);
       setCards((prevCards) => prevCards);
       resetClickedCards();
+    }
+
+    if (isBestEqualsToCurrent()) {
+      setBestScore((prevBestScore): number => prevBestScore + 1);
     }
   }, [score]);
 
@@ -38,9 +43,6 @@ function App() {
 
   const updateScore = (): void => {
     setScore((prevScore): number => prevScore + 1);
-    if (isBestEqualsToCurrent()) {
-      setBestScore((prevBestScore): number => prevBestScore + 1);
-    }
   };
 
   const updateClickedCards = (element: string | null): void => {
@@ -79,7 +81,7 @@ function App() {
     setGameWin(false);
   };
 
-  const isBestEqualsToCurrent = (): boolean => score >= bestScore;
+  const isBestEqualsToCurrent = (): boolean => score > bestScore;
 
   const isElementClicked = (elementID: string | null): boolean => (
     elementID !== null && clickedCardsIDs.includes(elementID)
